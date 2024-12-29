@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav id="nav-bar">
+        <img onclick="show_tab()" id="hamburger" src="{{url_for('static', filename='menus.png')}}" alt="">
+        <h3>CANDYLAND</h3>
+        <ul>
+            <li><a href="{{url_for('home')}}">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </nav>
+    <main style="height: 50vh;display: flex;justify-content: center;align-items: center;">
+        <form style="border: solid 1px black; padding: 5rem; display: flex;flex-direction: column; margin-top: 5rem; background-color: var(--sub-color);" action="/submit-form" method="post">
+            <label for="name">NAME</label><br>
+            <input type="text" name="name" id="name" required><br>
+            <label for="email" >EMAIL</label><br>
+            <input type="email" name="email" id="email" required><br>
+            <label for="msg">MESSAGE</label><br>
+            <textarea name="msg" id="msg" required></textarea><br>
+            <input style="border:none;padding: 1rem 1.5rem;cursor: pointer;" type="submit" value="Send">
+        </form>
+    </main>
+
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
+</body>
+</html>

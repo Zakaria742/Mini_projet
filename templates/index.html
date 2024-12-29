@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <nav id="nav-bar">
+        <img onclick="show_tab()" id="hamburger" src="{{ url_for('static', filename='menus.png') }}?v=1" alt="">
+        <h3>CANDYLAND</h3>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="{{ url_for('contact') }}">CONTACT</a></li>
+        </ul>
+    </nav>
+    <h1 id="main-title">WELCOME TO CANDYLAND!</h1>
+    <main id="cont">
+        <div class="card">
+            <h1>SOUR CANDY</h1>
+            <img src="{{ url_for('static', filename='pngegg.png') }}?v=1" alt="candy">
+            <p>
+                voluptatum nemo iste tenetur molestias eaque explicabo maiores adipisci unde, aliquid consequatur hic
+                laudantium saepe, officiis, aut commodi.
+            </p>
+            <button>BUY</button>
+        </div>
+        <div class="card">
+            <h1>PUCK POWER</h1>
+            <img src="{{ url_for('static', filename='acide.png') }}?v=1" alt="candy">
+            <p>
+                Lorem ipsum dolor! sit amet consectetur adipisicing elit. Odio assumenda voluptas dignissimos voluptatum
+                nemo iste tenetur molestias eaque explicabo maiores
+            </p>
+            <button>BUY</button>
+        </div>
+        <div class="card">
+            <h1>ACID BURST</h1>
+            <img src="{{ url_for('static', filename='ACID.jpeg') }}?v=1" alt="candy">
+            <p>
+                Lorem ipsum dolor! sit dignissimos voluptatum nemo iste tenetur molestias eaque explicabo maiores
+                adipisci unde, aliquid consequatur hic laudantium
+            </p>
+            <button>BUY</button>
+        </div>
+        <div class="card">
+            <h1>SOUR SIZZLE</h1>
+            <img src="{{ url_for('static', filename='power.jpeg') }}?v=1" alt="candy">
+            <p>
+                adipisicing elit. Odio assumenda voluptas dignissimos voluptatum nemo iste tenetur molestias eaque
+                explicabo maiores adipisci unde, aliquid consequatur hic laudantium saepe, officiis, aut commodi.
+            </p>
+            <button>BUY</button>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <p>123 Business St., City, Country</p>
+            <p>Email: info@example.com</p>
+            <p>Phone: +1 (123) 456-7890</p>
+        </div>
+        <a href="https://facebook.com" target="_blank">Facebook<i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com" target="_blank">Twitter<i class="fab fa-twitter"></i></a>
+    </footer>
+    <script src="{{ url_for('static', filename='js/script.js') }}?v=1"></script>
+</body>
+
+</html>
