@@ -12,11 +12,11 @@
         <h3>CANDYLAND</h3>
         <ul>
             <li><a href="{{url_for('home')}}">HOME</a></li>
-            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="{{url_for('about')}}">ABOUT</a></li>
             <li><a href="#">CONTACT</a></li>
         </ul>
     </nav>
-    <main style="height: 50vh;display: flex;justify-content: center;align-items: center;">
+    <main style="display: flex;justify-content: center;align-items: center;">
         <form style="border: solid 1px black; padding: 5rem; display: flex;flex-direction: column; margin-top: 5rem; background-color: var(--sub-color);" action="/submit-form" method="post">
             <label for="name">NAME</label><br>
             <input type="text" name="name" id="name" required><br>

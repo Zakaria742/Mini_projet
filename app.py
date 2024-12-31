@@ -10,6 +10,10 @@ def home():
 def contact():
     return render_template("contact.html")
 
+@app.route('/about')
+def about():
+    return render_template("about.html")
+
 @app.route("/submit-form", methods=['POST'])
 def submit_form():
     name = request.form['name']
