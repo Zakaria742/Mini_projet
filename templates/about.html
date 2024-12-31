@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav id="nav-bar">
+        <img onclick="show_tab()" id="hamburger" src="{{ url_for('static', filename='menus.png') }}?v=1" alt="">
+        <h3>CANDYLAND</h3>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="{{ url_for('contact') }}">CONTACT</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

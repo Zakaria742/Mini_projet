@@ -16,7 +16,7 @@
         <h3>CANDYLAND</h3>
         <ul>
             <li><a href="#">HOME</a></li>
-            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="{{ url_for('about')}}">ABOUT</a></li>
             <li><a href="{{ url_for('contact') }}">CONTACT</a></li>
         </ul>
     </nav>
@@ -58,16 +58,20 @@
             </p>
             <button>BUY</button>
         </div>
+        <div class="card"><h1>More coming soon...</h1></div>
     </main>
 
     <footer>
-        <div>
-            <p>123 Business St., City, Country</p>
-            <p>Email: info@example.com</p>
+        <div id="address">
+            <p>123 Business Lastah, Taroudant, Morroco</p>
+            <p>Email: zakaria.zaki.36@edu.uiz.ac.ma</p>
             <p>Phone: +1 (123) 456-7890</p>
         </div>
-        <a href="https://facebook.com" target="_blank">Facebook<i class="fab fa-facebook"></i></a>
-        <a href="https://twitter.com" target="_blank">Twitter<i class="fab fa-twitter"></i></a>
+        <div id="socials">
+            <p>Facebook</p>
+            <p>Twitter</p>
+        </div>
+        
     </footer>
     <script src="{{ url_for('static', filename='js/script.js') }}?v=1"></script>
 </body>

@@ -1,20 +1,20 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Asap:ital,wght@0,100..900;1,100..900&family=Madimi+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
 
 :root{
     /* --main-color: #000000;
     --sub-color: #000000; */
     /* --main-color: #FF7083; */
     --sub-color: #FF7083;
-    --main-color: #0FA3B1;
+    --main-color: #CAFF70;
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Asap", "VT323";
+    font-family: "Chewy", "Arsenal", "VT323";
     font-weight: 200;
     list-style: none;
     text-decoration: none;
@@ -29,6 +29,9 @@ body{
 a{
     color: black;
 }
+p{
+    font-family: "VT323";
+}
 #cont{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -40,7 +43,7 @@ a{
 #main-title{
     color: var(--main-color);
     text-align: center;
-    font-size: 10vh;
+    font-size: 10vw;
     margin: 5rem;
     font-weight: bolder;
 
@@ -56,10 +59,9 @@ a{
     padding: 2em;
     position: sticky;
     top: 0;
-    background-color: white;
-    z-index: 98;
+    background-color: rgb(255, 255, 255);
     width: 100%;
-    border-bottom: dashed 1px var(--sub-color);
+    transition: all 0.5s ease-in-out;
 }
 #nav-bar > ul{
     display: flex;
@@ -82,14 +84,15 @@ button{
     margin-top: 2em;
     color: var(--sub-color);
     background-color: white;
-    border: solid 1px;
+    border: dotted 6px;
+    border-radius: 30%;
     font-weight: bolder;
     cursor: pointer;
     transition: all ease-in-out 0.5s;
 }
 button:hover{
     background-color: var(--main-color);
-    transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.3s;
 }
 .card {
     text-align: center;
@@ -111,7 +114,8 @@ button:hover{
 #nav-bar.show{
     position: absolute;
     left: 0rem;
-    transition: left 0.5s ease-in-out;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.5s ease-in-out;
 }
 
 .card > h1{
@@ -126,12 +130,24 @@ body.mobile #nav-bar {
 }
 
 body.mobile #cont {
-    grid-template-columns: 1fr;  /* Adjust grid for mobile */
+    grid-template-columns: 1fr;
 }
 
 footer{
     background-color: burlywood;
     display: flex;
+    gap: 3rem;
+    padding: 1rem;
+}
+#socials{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#address{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 
@@ -167,10 +183,12 @@ footer{
         top: 0;
         left: -16em;
         background-color: rgba(255, 255, 255, 0);
-        transition: left 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
     }
     #nav-bar.show {
         left: 0;
+        background-color: rgb(255, 255, 255);
+        transition: all 0.5s ease-in-out;
     }
     #hamburger{
         position: relative;
